@@ -26,7 +26,7 @@ const imageName = './test.png';
 
 module.exports = async function() {
   console.log( 'attempting resize' );
-  resizeImage( imageName, 600, 400, jimp.MIME_PNG )
+  await resizeImage( imageName, 600, 400, jimp.MIME_PNG )
     .then( buffer => {
       console.log( 'received buffer, great news!' );
     } )
